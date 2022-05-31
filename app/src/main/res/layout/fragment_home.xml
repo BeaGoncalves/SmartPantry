@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.HomeFragment">
+
+    <ImageView
+        android:id="@+id/imagem_fundo"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/fundonovo"
+        android:scaleType="centerCrop"
+        android:alpha="0.4"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <!--    Imagem lixeira -->
+
+    <!--    Text Don't Waste -->
+
+    <ImageView
+        android:id="@+id/imagem_lixeira"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/logo_sem_fundo"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/text_nome_app"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-medium"
+        android:text="Don't Waste"
+        android:gravity="center"
+        android:textSize="32sp"
+        android:textColor="@color/black"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imagem_lixeira"/>
+
+    <!--    Text Organize -->
+
+    <TextView
+        android:id="@+id/text_organize"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center"
+        android:text="organize"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_nome_app"/>
+
+    <!--    Text Sua despensa inteligente -->
+
+    <TextView
+        android:id="@+id/text_slogan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Sua despensa inteligente"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:elegantTextHeight="true"
+        android:textColor="#355E5D"
+        android:textSize="38sp"
+        android:layout_margin="40dp"
+        android:gravity="center"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_organize"/>
+
+    <!--    Botão Primeiro Acesso-->
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_primeiro_acesso_fragment_home"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:text="Primeiro acesso"
+        android:background="#94D3BD"
+        app:layout_constraintTop_toBottomOf="@id/btn_login_fragment_home"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <!--    Botão Login -->
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_login_fragment_home"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:text="Login"
+        android:backgroundTint="#9BDAD3"
+        android:textSize="15sp"
+        app:layout_constraintTop_toBottomOf="@id/text_slogan"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/alimentoCadastrado"
+        android:icon="@drawable/ic_baseline_list"
+        android:title="Alimentos"
+        />
+
+    <item
+        android:id="@+id/cadastrarAlimento"
+        android:icon="@drawable/ic_baseline_add_box_24"
+        android:title="Novo alimento"/>
+
+    <item
+        android:id="@+id/relatorio"
+        android:icon="@drawable/ic_baseline_video_label_24"
+        android:title="Relatório"/>
+</menu>

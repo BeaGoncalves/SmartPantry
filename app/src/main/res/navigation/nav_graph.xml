@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/cadastroFragment"
+        android:name="com.example.smartpantry.ui.CadastroFragment"
+        android:label="fragment_cadastro"
+        tools:layout="@layout/fragment_cadastro" >
+        <action
+            android:id="@+id/action_cadastroFragment_to_dadosSecundariosCadastroFragment"
+            app:destination="@id/dadosSecundariosCadastroFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.smartpantry.ui.HomeFragment"
+        android:label="Home "
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_homeFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_cadastroFragment"
+            app:destination="@id/cadastroFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.smartpantry.ui.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment_to_inicioFragment"
+            app:destination="@id/inicioFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_resetSenhaFragment"
+            app:destination="@id/resetSenhaFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/inicioFragment"
+        android:name="com.example.smartpantry.ui.InicioFragment"
+        android:label="fragment_inicio"
+        tools:layout="@layout/fragment_inicio" />
+    <fragment
+        android:id="@+id/dadosSecundariosCadastroFragment"
+        android:name="com.example.smartpantry.ui.DadosSecundariosCadastroFragment"
+        android:label="DadosSecundariosCadastroFragment"
+        tools:layout="@layout/fragment_dados_secundarios_cadastro">
+        <action
+            android:id="@+id/action_dadosSecundariosCadastroFragment_to_inicioFragment"
+            app:destination="@id/inicioFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/resetSenhaFragment"
+        android:name="com.example.smartpantry.ui.ResetSenhaFragment"
+        android:label="ResetSenhaFragment"
+        tools:layout="@layout/fragment_reset_senha">
+        <action
+            android:id="@+id/action_resetSenhaFragment_to_confirmationDialogFragment"
+            app:destination="@id/confirmationDialogFragment" />
+    </fragment>
+    <dialog
+        android:id="@+id/confirmationDialogFragment"
+        android:name="com.example.smartpantry.ui.ConfirmationDialogFragment"
+        android:label="ConfirmationDialogFragment" >
+        <action
+            android:id="@+id/action_confirmationDialogFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </dialog>
+</navigation>

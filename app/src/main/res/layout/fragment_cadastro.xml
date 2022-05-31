@@ -1,0 +1,157 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:fillViewport="true">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <!--    Imagem Usuario -->
+
+        <ImageView
+            android:id="@+id/imagem_user_cadastro"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="64dp"
+            android:src="@drawable/cadastro_icone_usuario"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/text_nome_tela_cadastro"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginRight="16dp"
+            android:hint="Nome"
+            app:errorIconDrawable="@drawable/ic_baseline_error"
+            app:errorEnabled="true"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/imagem_user_cadastro">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edit_nome_cadastro"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textEmailAddress" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!--    Edit Email -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/text_email_cadastro"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:hint="Email"
+            app:errorIconDrawable="@drawable/ic_baseline_error"
+            app:errorEnabled="true"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/text_nome_tela_cadastro">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edit_email_cadastro"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textEmailAddress" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!--    Edit Senha -->
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/text_senha_cadastro"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            app:errorEnabled="true"
+            app:passwordToggleEnabled="true"
+            app:errorIconDrawable="@null"
+            app:counterEnabled="true"
+            app:counterMaxLength="8"
+            android:hint="Senha"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/text_email_cadastro">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edit_senha_cadastro"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxLength="8"
+                android:digits="123456789"
+                android:inputType="numberPassword" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+   <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/text__confirma_senha_cadastro"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            app:errorEnabled="true"
+            app:passwordToggleEnabled="true"
+            app:errorIconDrawable="@null"
+            app:counterEnabled="true"
+            app:counterMaxLength="8"
+            android:hint="Repetir senha"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/text_senha_cadastro">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edit_confirma_senha_cadastro"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxLength="8"
+                android:digits="123456789"
+                android:inputType="numberPassword" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!--  Botão Ajuda -->
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/btn_ajuda_cadastro"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_margin="16dp"
+            android:src="@drawable/ic_baseline_question"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/text__confirma_senha_cadastro" />
+
+        <!--    Botão Proximo -->
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_proximo_cadastro"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_margin="16dp"
+            android:background="@drawable/bordar_costumizado"
+            android:backgroundTint="#4FA08D"
+            android:text="Continuar"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintVertical_bias="0.21"
+            app:layout_constraintTop_toBottomOf="@id/text__confirma_senha_cadastro"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
